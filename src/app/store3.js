@@ -8,7 +8,8 @@ import instaReducer from "./reducers3/instaReducer";
 const store = createStore(
 	combineReducers({instaReducer}), 
 	{}, 
-	applyMiddleware(logger(), thunk, promise())
+	// applyMiddleware(logger(), thunk, promise())
+	applyMiddleware(thunk, promise())
 	);
 
 export default store;
